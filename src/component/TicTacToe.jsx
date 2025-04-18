@@ -35,7 +35,6 @@ const TicTacToe = () => {
                 ))
             }
         </div>
-      <button className='items' onClick={() => handeleClick()}>Reset Game</button>
       <button className='itemsReset' onClick={() => setBoard(Array(9).fill(null))}>Reset Game</button>
       </div>
     </div>
