@@ -35,7 +35,7 @@ const TicTacToe = () => {
                 ))
             }
         </div>
-      <button className='itemsReset' onClick={() => setBoard(Array(9).fill(null))}>Reset Game</button>
+        <button className='itemsReset' onClick={() => setBoard(Array(9).fill(null))}>Reset Game</button>
       </div>
     </div>
   )
@@ -57,7 +57,13 @@ function calculateWinner(items) {
         const [a, b, c] = winnerCombinations[i]
         if (items[a] && items[a] === items[b] && items[a] === items[c]) {
             return items[a]
+           
+            
         }
+    }
+
+    if(items.every(item => item !== null)){
+        return "Draw"
     }
     return null
 }
