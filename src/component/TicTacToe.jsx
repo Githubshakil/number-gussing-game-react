@@ -37,7 +37,11 @@ const TicTacToe = () => {
                 ))
             }
         </div>
+<<<<<<< Updated upstream
       <button className='items' onClick={() => handeleClick()}>Reset Game</button>
+=======
+        
+>>>>>>> Stashed changes
       </div>
     </div>
   )
