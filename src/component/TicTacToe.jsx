@@ -8,7 +8,7 @@ const TicTacToe = () => {
 
     const winner = calculateWinner(board)
 
-    let status = winner ? `Winner ${winner }` : `Next player: ${isXNext ? 'X' : 'O'} turn`
+    let status = winner ? `Winner is ${winner }` : `Next player: ${isXNext ? 'X' : 'O'} turn`
     
     let handleClick = (index) => {
         if(board[index] || winner) return
@@ -17,6 +17,9 @@ const TicTacToe = () => {
         setBoard(newBoard)
         setIsXNext(!isXNext)
     }
+
+    
+
 
 
 
@@ -34,6 +37,7 @@ const TicTacToe = () => {
                 ))
             }
         </div>
+      <button className='items' onClick={() => handeleClick()}>Reset Game</button>
       </div>
     </div>
   )
@@ -59,4 +63,8 @@ function calculateWinner(items) {
     }
     return null
 }
+
+
+
+
 export default TicTacToe
