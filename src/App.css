@@ -37,3 +37,11 @@
     background-color: bisque;
     color: black;
 }
+
+.itemsReset{
+    font-size: 35px;
+    font-weight: 500;
+    padding: 15px 10px;
+    color: blueviolet;
+    cursor: pointer;
+}
