@@ -5,6 +5,7 @@
 }
 
 
+
 .game-container{
     display: flex;
     flex-direction: column;
@@ -12,6 +13,7 @@
     justify-content: center;
     height: 100vh;
     background: rgb(84, 124, 148);
+    font-family: "Fredoka", sans-serif;
 }
 .game-title{
     font-size: 2rem;
@@ -36,6 +38,7 @@
     font-size: 30px;
     color: blueviolet;
     font-weight: 800;
+    font-family: "Fredoka", sans-serif;
     
 
 }
@@ -51,4 +54,6 @@
     padding: 15px 10px;
     color: blueviolet;
     cursor: pointer;
+    font-family: "Fredoka", sans-serif;
 }
+
