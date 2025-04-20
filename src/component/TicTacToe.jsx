@@ -8,7 +8,7 @@ const TicTacToe = () => {
 
     const winner = calculateWinner(board)
 
-    let status = winner ? `Winner is ${winner }` : `Next player: ${isXNext ? 'X' : 'O'} turn`
+    let status = winner === "Draw" ? "The match is draw" : winner ? `Winner is ${winner}` : `Next player: ${isXNext ? 'X' : 'O'} turn`
     
     let handleClick = (index) => {
         if(board[index] || winner) return
@@ -21,24 +21,29 @@ const TicTacToe = () => {
 
 
 
-  return (
+return (
     <div>
-      <div className='game-container'>
-        <h1 className='game-title'>Tic Tac Toe</h1>
-        <div className='game-status'>{status}</div>
-        <div className="game-board">
-            {
-                board.map((value, index) => (
-                    <button key={index} className="items" onClick={() => handleClick(index)}>
-                       {value}
-                    </button>
-                ))
-            }
+        <div className='game-container'>
+            <h1 className='game-title'>Tic Tac Toe</h1>
+            <div className='game-status'>{status}</div>
+            <div className="game-board">
+                    {
+                            board.map((value, index) => (
+                                    <button key={index} className="items" onClick={() => handleClick(index)}>
+                                         {value}
+                                    </button>
+                            ))
+                    }
+            </div>
+            
+            {(winner || board.every(item => item !== null)) && (
+                <button className='itemsReset' onClick={() => setBoard(Array(9).fill(null))}>
+                    Reset Game
+                </button>
+            )}
         </div>
-        <button className='itemsReset' onClick={() => setBoard(Array(9).fill(null))}>Reset Game</button>
-      </div>
     </div>
-  )
+)
 }
 
 function calculateWinner(items) {
